@@ -1,9 +1,16 @@
+document.querySelectorAll(".header__dropdown-simplebar").forEach(dropdown => {
+  new SimpleBar(dropdown, {
+  autoHide: false,
+  scrollbarMaxSize: 25,
+});
+})
+
 // шапка подменю декстоп
 
 document.querySelectorAll(".header__btn").forEach(item => {
   item.addEventListener("click", function() {
     let btn = this;
-    let dropdown = this.parentElement.querySelector(".header__author-list");
+    let dropdown = this.parentElement.querySelector(".header__dropdown");
 
     document.querySelectorAll(".header__btn").forEach(el => {
       if (el != btn) {
@@ -11,12 +18,12 @@ document.querySelectorAll(".header__btn").forEach(item => {
       }
     });
 
-    document.querySelectorAll(".header__author-list").forEach(el => {
+    document.querySelectorAll(".header__dropdown").forEach(el => {
       if (el != dropdown) {
-        el.classList.remove("header__author-list_active");
+        el.classList.remove("header__dropdown_active");
       }
     })
-    dropdown.classList.toggle("header__author-list_active");
+    dropdown.classList.toggle("header__dropdown_active");
     btn.classList.toggle("header__btn_active");
     let contains = btn.classList.contains('header__btn_active');
       if (contains == true) {
@@ -28,8 +35,8 @@ document.querySelectorAll(".header__btn").forEach(item => {
 document.addEventListener("click", function(e) {
   let target = e.target;
   if (!target.closest(".header__list_bottom")) {
-    document.querySelectorAll(".header__author-list").forEach(el => {
-        el.classList.remove("header__author-list_active");
+    document.querySelectorAll(".header__dropdown").forEach(el => {
+        el.classList.remove("header__dropdown_active");
     })
      document.querySelectorAll(".header__btn").forEach(el => {
         el.classList.remove("header__btn_active");
@@ -202,6 +209,11 @@ const swiper = new Swiper('.gallery__right', {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
+
+  pagination: {
+    el: ".gallery__pagination",
+    type: "fraction"
+  }
 });
 
 const swiper2 = new Swiper('.events__swiper-container', {
@@ -231,6 +243,11 @@ const swiper2 = new Swiper('.events__swiper-container', {
     }
   },
 
+  navigation: {
+    nextEl: '.events__nav-btn_next',
+    prevEl: '.events__nav-btn_prev',
+  },
+
   // If we need pagination
   pagination: {
     el: '.events__pagination',
@@ -242,7 +259,7 @@ const swiper2 = new Swiper('.events__swiper-container', {
 const swiper3 = new Swiper('.progects__swiper-container', {
   // Optional parameters
   direction: 'horizontal',
-  loop: true,
+  // loop: true,
   slidesPerView: 1,
   slidesPerGroup: 1,
   spaceBetween: 34,
@@ -259,7 +276,7 @@ const swiper3 = new Swiper('.progects__swiper-container', {
       spaceBetween: 50,
     },
 
-    450: {
+    500: {
       slidesPerView: 2,
       slidesPerGroup: 2,
       spaceBetween: 34,
@@ -372,3 +389,10 @@ validation
       errorMessage: 'Вы не ввели телефон!',
     },
   ]);
+
+  // Маска
+
+  var selector = document.getElementById("tel");
+
+  var im = new Inputmask("+7 999-999-99-99");
+  im.mask(selector);

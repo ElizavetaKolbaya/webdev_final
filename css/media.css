@@ -90,6 +90,10 @@
     max-width: 100%;
   }
 
+  .progects__partner-logo {
+    max-width: 235px;
+  }
+
   /* контакты */
   .contacts__top {
     flex-wrap: wrap;
@@ -410,6 +414,18 @@
     max-width: 89%;
   }
 
+  .progects__item {
+    min-height: 128px;
+  }
+
+  .progects__partner-logo {
+    max-width: 283px;
+  }
+
+  .progects__item:first-child .progects__partner-logo {
+    max-width: 283px;
+  }
+
   /* контакты */
 
   .contacts__top {
@@ -629,6 +645,18 @@
   display: none;
   }
 
+  .progects__partner-logo {
+    max-width: 216px;
+  }
+
+  .progects__item:first-child .progects__partner-logo {
+    max-width: 216px;
+  }
+
+  .progects__item {
+    min-height: 105px;
+  }
+
   /* контакты */
 
   .contacts__form {
@@ -729,6 +757,11 @@
     font-weight: 600;
     font-size: 12px;
     line-height: 16px;
+  }
+
+  .header__search-exit svg {
+    width: 18px;
+    height: 18px;
   }
 
   /* херо */
@@ -980,7 +1013,7 @@
   }
 
   .progects__descr {
-    margin-bottom: 19px;
+    margin-bottom: 21px;
     font-weight: 400;
     font-size: 16px;
     line-height: 32px;
@@ -997,7 +1030,7 @@
 
   .progects__swiper-container {
     max-width: 68%;
-    padding: 10px 1px 15px 2px;
+    padding: 10px 1px 20px 2px;
   }
 
   .progects__nav-btn {
@@ -1007,6 +1040,10 @@
   .progects__item {
     display: flex;
     justify-content: center ;
+  }
+
+  .progects__item {
+    min-height: 63px;
   }
 
   /* контакты */
