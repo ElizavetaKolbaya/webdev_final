@@ -290,6 +290,7 @@
   }
 
   .hero__descr {
+    max-width: 675px;
     margin-bottom: 133px;
   }
 
@@ -358,7 +359,7 @@
   /* события */
 
   .events {
-    padding-bottom: 118px;
+    padding-bottom: 115px;
 }
 
   .events__item {
@@ -448,7 +449,7 @@
   /* подвал */
 
   .footer__container {
-    padding: 41px 15px 38px 15px;
+    padding: 39px 15px 38px 15px;
     align-items: center;
   }
 
@@ -556,8 +557,16 @@
   }
 
   .gallery__nav-btn:not(:last-child) {
-    margin-right: 70px;
+    margin-right: 18px;
   }
+
+  .gallery__nav-btn:not(:last-child), .gallery__pagination {
+    margin-right: 18px;
+  }
+
+  .ui-accordion .ui-accordion-header {
+    padding: 33px 0 30px 0;
+}
 
   /* каталог */
 
@@ -571,7 +580,7 @@
 
   .catalog__list-years {
     width: 100%;
-    margin-bottom: 48px;
+    margin-bottom: 50px;
   }
 
   .catalog__left {
@@ -638,7 +647,7 @@
 
   .progects__swiper-container {
     max-width: 85%;
-    padding: 29px 1px 77px 2px;
+    padding: 29px 1px 81px 2px;
   }
 
   .progects__partner-logo_act {
@@ -676,7 +685,11 @@
 
   .just-validate-error-label:nth-child(odd) {
     left: 55%;
-}
+  }
+
+  .contacts__map {
+    min-height: 701px;
+  }
 
 }
 
@@ -858,7 +871,7 @@
 
   .gallery__pagin {
     margin-bottom: 0;
-    padding-top: 16px;
+    padding-top: 18px;
     justify-content: center;
   }
 
@@ -953,6 +966,10 @@
     font-size: 16px;
     line-height: 32px;
   }
+
+  .catalog__list-years {
+    margin-bottom: 48px;
+}
 
   /* события */
 

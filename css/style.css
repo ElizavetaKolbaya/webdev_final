@@ -184,7 +184,6 @@ body {
 
 .header__login-in {
   display: inline-block;
-  padding: 2px 6px;
   font-weight: 400;
   font-size: 18px;
   line-height: 25px;
@@ -549,8 +548,8 @@ body {
 
 .hero__bg-slide {
   background-repeat: no-repeat;
-  background-size: 100% 115%;
-  background-position: 0px -100px;
+  background-size: auto;
+  background-position: 0 -100px;
 }
 
 .hero__bg-slide_1 {
@@ -567,11 +566,12 @@ body {
 
 .hero__container {
   position: relative;
-  padding: 133px 56% 121px 15px;
+  padding: 133px 15px 121px 15px;
   z-index: 1;
 }
 
 .hero__title {
+  max-width: 567px;
   font-weight: 700;
   font-size: 72px;
   line-height: 97px;
@@ -579,6 +579,7 @@ body {
 }
 
 .hero__descr {
+  max-width: 554px;
   margin-bottom: 91px;
   font-weight: 700;
   font-size: 18px;
@@ -783,7 +784,7 @@ body {
 
 .gallery__pagin {
   padding-top: 25px;
-  margin-bottom: 32px;
+  margin-bottom: 27px;
   align-items: center;
 }
 
@@ -805,7 +806,7 @@ body {
 
 .gallery__nav-btn:not(:last-child),
 .gallery__pagination {
-  margin-right: 11px;
+  margin-right: 23px;
 }
 
 .gallery__nav-btn {
@@ -836,15 +837,24 @@ body {
   border-radius: 100%;
 }
 
+.gallery__nav-btn svg {
+  width: 31px;
+  height: 31px;
+}
+
+.gallery__pics {
+  height: auto;
+}
+
 .gallery__slides {
   position: relative;
 }
 
 .gallery__search-pic {
   position: absolute;
-  top: 33%;
+  top: 40%;
   left: 37%;
-  z-index: 2;
+  z-index: 20;
   opacity: 0;
   transition: opacity .2s linear;
 }
@@ -859,7 +869,7 @@ body {
   top: 20px;
   left: 25px;
   right: 25px;
-  bottom: 105px;
+  bottom: 25px;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 1;
   opacity: 0;
@@ -892,11 +902,22 @@ body {
 .gallery__modal-open {
   position: absolute;
   top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
+  right: 3px;
+  left: 3px;
+  bottom: 3px;
   font-size: 0;
   z-index: 10;
+  transition: outline .2s linear, background-color .1s linear;
+}
+
+.gallery__modal-open:focus {
+  outline: 3px solid #7943A4;
+}
+
+.gallery__modal-open:active {
+  background-color: rgba(194, 131, 243, 0.4);
+  left: 0;
+  right: 0;
 }
 
 .gallery__modal-title_painter {
@@ -966,7 +987,7 @@ body {
 
 .ui-accordion .ui-accordion-header {
   margin: 0;
-  padding: 33px 0 31px 0;
+  padding: 33px 0 30px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -997,6 +1018,10 @@ body {
 
 .catalog__icon svg path {
   transition: stroke .2s linear, fill .2s linear;
+}
+
+.catalog__icon svg {
+  border-radius: 100%;
 }
 
 /* анимация аккордион */
@@ -1060,6 +1085,12 @@ body {
 
 .catalog__painter-btn:active {
   background-color: transparent;
+  border-bottom: none;
+}
+
+.painter-act {
+  color: #9D5CD0;
+  background-color: transparent;
 }
 
 /* анимация конец */
@@ -1078,8 +1109,12 @@ body {
   transition:  background-color .2s linear, border-bottom .5s linear;
 }
 
+.catalog .catalog__painter-btn  {
+  font-family: 'Open-sans';
+}
+
 .ui-accordion .ui-accordion-content{
-  padding: 25px 9% 24px 0;
+  padding: 27px 9% 24px 0;
 }
 
 .catalog__item-years:last-child .catalog__list-painters {
@@ -1115,7 +1150,7 @@ body {
 }
 
 .catalog__img {
-  margin-bottom: 30px;
+  margin-bottom: 27px;
 }
 
 .catalog__painter-name {
@@ -1128,7 +1163,7 @@ body {
 }
 
 .catalog__painter-descr {
-  max-width: 100%;
+  max-width: 95%;
 }
 
 .catalog__no-inf {
@@ -1140,7 +1175,7 @@ body {
   width: 94%;
   top: 0;
   padding-top: 66%;
-  background-image: url('..../img/catalog-no-painter.svg');
+  background-image: url('../img/catalog-no-painter.svg');
   background-size: contain;
   background-repeat: no-repeat;
   visibility: hidden;
@@ -1157,7 +1192,7 @@ body {
 /* события */
 
 .events {
-  padding-top: 77px;
+  padding-top: 81px;
   padding-bottom: 80px;
 }
 
@@ -1181,12 +1216,16 @@ body {
   height: 50px;
 }
 
+.events__nav-btn svg {
+  border-radius: 100%;
+}
+
 .events__pagination {
   display: none;
 }
 
 .events__nav-btn_prev {
-  left: 0;
+  left: -9px;
   transform: rotate(90deg);
 }
 
@@ -1361,6 +1400,7 @@ body {
 .progects__nav-btn svg {
   width: 30px;
   height: 30px;
+  border-radius: 100%;
 }
 
 .progects__nav-btn svg path {

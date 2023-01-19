@@ -162,6 +162,17 @@ painterDomeniko.addEventListener('click',
     noInf.classList.remove('catalog__painter-no-inf_act');
   })
 
+painter.forEach(function(it) {
+  it.addEventListener('click',
+  function(){
+    painter.forEach(function(itF) {
+      itF.classList.remove('painter-act')
+    }),
+    it.classList.add('painter-act'),
+    it.blur()
+  })
+});
+
 
 // слайдер
 
@@ -179,6 +190,9 @@ const swiperHero = new Swiper('.hero__swiper-container', {
 const swiper = new Swiper('.gallery__right', {
   // Optional parameters
   direction: 'horizontal',
+  a11y: {
+    enabled: false,
+  },
   loop: false,
   slidesPerView: 1,
   slidesPerGroup: 1,
@@ -219,6 +233,9 @@ const swiper = new Swiper('.gallery__right', {
 const swiper2 = new Swiper('.events__swiper-container', {
   // Optional parameters
   direction: 'horizontal',
+  a11y: {
+    enabled: false,
+  },
   loop: false,
   slidesPerView: 1,
   slidesPerGroup: 1,
@@ -259,7 +276,9 @@ const swiper2 = new Swiper('.events__swiper-container', {
 const swiper3 = new Swiper('.progects__swiper-container', {
   // Optional parameters
   direction: 'horizontal',
-  // loop: true,
+  a11y: {
+    enabled: false,
+  },
   slidesPerView: 1,
   slidesPerGroup: 1,
   spaceBetween: 34,
@@ -353,7 +372,7 @@ function init(){
     });
     var myPlacemark = new ymaps.Placemark([55.758468, 37.601088], {}, {
       iconLayout: 'default#image',
-      iconImageHref: '../img/map-mark.svg',
+      iconImageHref: './img/map-mark.svg',
       iconImageSize: [23, 23],
       iconImageOffset: [-3, -42]
     });
