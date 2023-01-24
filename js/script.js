@@ -182,17 +182,14 @@ const swiperHero = new Swiper('.hero__swiper-container', {
   speed: 500,
   slidesPerView: 1,
   loop: true,
-  autoplay: {
-    delay: 4000
-  }
+  // autoplay: {
+  //   delay: 4000
+  // }
 });
 
 const swiper = new Swiper('.gallery__right', {
   // Optional parameters
   direction: 'horizontal',
-  a11y: {
-    enabled: false,
-  },
   loop: false,
   slidesPerView: 1,
   slidesPerGroup: 1,
@@ -233,9 +230,6 @@ const swiper = new Swiper('.gallery__right', {
 const swiper2 = new Swiper('.events__swiper-container', {
   // Optional parameters
   direction: 'horizontal',
-  a11y: {
-    enabled: false,
-  },
   loop: false,
   slidesPerView: 1,
   slidesPerGroup: 1,
@@ -337,7 +331,8 @@ $(function(){
 
 $( function() {
   $( ".catalog__list-years" ).accordion({
-    heightStyle: "content"
+    heightStyle: "content",
+    collapsible: true
   });
 } );
 

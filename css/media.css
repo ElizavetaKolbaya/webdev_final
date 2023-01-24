@@ -156,7 +156,7 @@
   .header__nav_top {
     display: flex;
     width: 100%;
-    height: 100vh;
+    height: 90vh;
     overflow: auto;
     position: absolute;
     top: 99%;
@@ -184,6 +184,7 @@
     display: block;
     position: absolute;
     top: 27px;
+    left: 50px;
     z-index: 10;
   }
 
@@ -745,6 +746,7 @@
 
   .header__nav_top {
     padding: 50px 15px 26px 15px;
+    height: 96vh;
   }
 
   .header__item_top {
@@ -756,7 +758,8 @@
   }
 
   .header__burger-btn_exit-active {
-    top: 14px;;
+    top: 14px;
+    left: 15px;
   }
 
   .header__item_top {

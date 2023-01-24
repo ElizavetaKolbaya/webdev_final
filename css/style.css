@@ -548,7 +548,7 @@ body {
 
 .hero__bg-slide {
   background-repeat: no-repeat;
-  background-size: auto;
+  background-size: cover;
   background-position: 0 -100px;
 }
 
@@ -815,6 +815,10 @@ body {
   height: 27px;
 }
 
+.gallery__nav-btn[tabindex="-1"] {
+  opacity: 0.5;
+}
+
 .gallery__nav-btn[tabindex="0"] {
   transition: border .2s linear;
 }
@@ -1040,11 +1044,11 @@ body {
   border-color: var(--blchrd-purple);
 }
 
-.ui-state-hover .catalog__title-years {
+.catalog__item-years .catalog__years.ui-state-hover .catalog__title-years {
   color: var(--blchrd-purple);
 }
 
-.ui-state-hover .catalog__icon svg path:not(:last-child) {
+.catalog__item-years .catalog__years.ui-state-hover .catalog__icon svg path:not(:last-child) {
   fill: #D1A9F0;
   stroke: #D1A9F0;
 }
@@ -1069,6 +1073,18 @@ body {
 
 .ui-accordion-header-active .catalog__icon svg path:nth-child(2) {
   stroke: var(--blchrd-purple);
+}
+
+.catalog__years.ui-corner-all
+.catalog__title-years {
+  color: var(--blchrd-black);
+  background-color: transparent;
+}
+
+.catalog__years.ui-corner-all
+.catalog__icon svg path:not(:last-child) {
+  fill: #ECECEC;
+  stroke: #ECECEC;
 }
 
 .catalog__years:active .catalog__title-years {
